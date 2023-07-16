@@ -1,0 +1,111 @@
+/* {
+  border: 1px solid red;
+}
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
+}
+
+/* HEADER */
+.header {
+  grid-column: 2;
+  grid-row: 1;
+
+  background-color: white;
+  padding-inline: 32px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  align-items: center;
+}
+
+.user-infos {
+  grid-column: 2;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  align-items: center;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  justify-items: start;
+  align-items: center;
+}
+
+.search input {
+  width: 90%;
+  border-radius: 15px;
+  border: none;
+  background-color: #DDD;
+  padding-block: .5em;
+}
+
+.landing {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  align-items: center;
+  justify-items: center;
+  justify-self: flex-start;
+}
+
+.landing .profile-pic {
+  grid-row: span 2;
+}
+
+.landing .hello,
+.landing .name {
+  justify-self: start;
+}
+
+.landing .hello {
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.landing .name {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 1fr));
+  gap: 16px;
+}
+
+.buttons button {
+  padding-inline: 16px;
+  padding-block: 8px;
+
+  background-color: blue;
+
+  color: white;
+  font-weight: 900;
+
+  border: none;
+  border-radius: 24px;
+}
+
+aside {
+  grid-column: 1;
+  grid-row: span 2;
+  background-color: blue;
+}
+
+main {
+  grid-column: 2;
+  background-color: #CCC;
+}
